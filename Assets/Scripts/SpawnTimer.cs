@@ -8,6 +8,9 @@ public class SpawnTimer : MonoBehaviour
     public int amount;
     public int maxWaitTime = 10;
     public int minWaitTime = 2;
+    public float minOffsetSpawn = -10f;
+    public float maxOffsetSpawn = 10f;
+    public bool spawnInsideBounds;
 
     private void Start()
     {
@@ -19,7 +22,7 @@ public class SpawnTimer : MonoBehaviour
         while (true)
         {
             int randomWaitTime = Random.Range(minWaitTime, maxWaitTime);
-            SpawnManager.Instance.SpawnSpawnable(Spawnables, 1);
+            SpawnManager.Instance.SpawnSpawnable(Spawnables, 1, minOffsetSpawn, maxOffsetSpawn, spawnInsideBounds);
             yield return new WaitForSeconds(randomWaitTime);
         }
     }
