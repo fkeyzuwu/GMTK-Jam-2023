@@ -11,6 +11,8 @@ public class Healthpack : Pickable
     [SerializeField] private float rotationDegrees = 20f;
     [SerializeField] private float scaleSpeed = 30f;
 
+    [SerializeField] private float despawnTime = 8f;
+
     private float rotationPhase = 0f;
 
     private bool finisheScaling = false;
@@ -20,7 +22,7 @@ public class Healthpack : Pickable
         LeanTween.scale(gameObject, Vector2.one, spawnExpandDuration)
             .setEaseInOutQuart()
             .setOnComplete(() => finisheScaling = true);
-
+        StartCoroutine(Despawn());
     }
 
     private void Update()
@@ -39,5 +41,11 @@ public class Healthpack : Pickable
     public override void OnPickUpEffect()
     {
         PlayerController.Instance.health.Heal(healAmount);
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(despawnTime);
+        LeanTween.alpha(gameObject, 0f, 1f).setOnComplete(() => Destroy(gameObject));
     }
 }
