@@ -45,9 +45,16 @@ public class UpgradeSystem : MonoBehaviour
     
     public void GenerateRandomUpgrade()
     {
-        int randomUpgradeIndex = UnityEngine.Random.Range(0, possibleUpgrades.Count);
+        if (possibleUpgrades.Count > 0)
+        {
+            int randomUpgradeIndex = UnityEngine.Random.Range(0, possibleUpgrades.Count);
 
-        AddUpgrade(possibleUpgrades[randomUpgradeIndex]);
+            AddUpgrade(possibleUpgrades[randomUpgradeIndex]);
+        } 
+        else
+        {
+            Debug.LogError("[UpgradeSystemError] No upgrades attached to the 'Possible Upgrades List' on the upgrade system attached to the player.");
+        }
     }
 
     public void AddUpgrade(UpgradeData upgradeData)
