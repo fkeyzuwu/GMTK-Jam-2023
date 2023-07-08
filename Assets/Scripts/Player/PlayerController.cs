@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    [Header("Sprite")]
+    public SpriteRenderer spriteRenderer;
+
     [Header("Movement")]
     public float speed = 5.0f;
 
@@ -50,9 +53,9 @@ public class PlayerController : MonoBehaviour
     {
         moveDeltaInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (moveDeltaInput.x > 0)
-            transform.localScale = new Vector2(1, transform.localScale.y);
+            spriteRenderer.flipX = false;
         else if (moveDeltaInput.x < 0)
-            transform.localScale = new Vector2(-1, transform.localScale.y);
+            spriteRenderer.flipX = true;
     }
 
     private void FixedUpdate()
@@ -69,9 +72,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, interactionRadius);
-    }
 }
