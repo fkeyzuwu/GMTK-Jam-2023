@@ -25,9 +25,7 @@ public class Healthpack : Pickable
     {
         float rotateSine = Mathf.Sin(Time.time * 1.1f);
         float rotation = (rotateSine * Time.deltaTime * rotationDegrees);
-        print(rotation);
         transform.Rotate(0, 0, rotation);
-        //transform.Rotate(0, 0, rotateAmount * Time.deltaTime);
         if (finisheScaling)
         {
             float sineValue = (Mathf.Sin(Time.time * scaleSpeed) + 1) * 0.25f + 0.5f;
