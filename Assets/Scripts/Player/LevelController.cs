@@ -38,9 +38,9 @@ public class LevelController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (currentExp >= requiredExp)
         {
-            GainExperience(20f);
+            LevelUp();
         }
     }
 
@@ -55,10 +55,6 @@ public class LevelController : MonoBehaviour
     {
         float multiplier = (1 + (int)(level / levelScaleExpGain) * gainExpMultiplier);
         currentExp += exp * multiplier;
-        if (currentExp >= requiredExp)
-        {
-            LevelUp();
-        }
     }
 
     private int CalculateRequiredExp()
