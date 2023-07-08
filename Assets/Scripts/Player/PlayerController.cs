@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,8 +41,9 @@ public class PlayerController : MonoBehaviour
     [Header("Health")]
     public PlayerHealth health;
 
-    [Header("Health")]
+    [Header("UpgradeSystem")]
     public UpgradeSystem upgradeSystem;
+    public UpgradePicker upgradePicker;
 
     void Start()
     {
@@ -76,5 +78,18 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRadius);
+    }
+
+    public void ActivateUpgradePicker()
+    {
+        upgradePicker.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void UpgradePicked(UpgradeData upgradePicked)
+    {
+        upgradeSystem.AddUpgrade(upgradePicked);
+        upgradePicker.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

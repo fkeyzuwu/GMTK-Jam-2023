@@ -69,6 +69,8 @@ public class LevelController : MonoBehaviour
         requiredExp = CalculateRequiredExp();
         experienceBar.SetExperience(currentExp);
         experienceText.SetTextExperience(currentExp, requiredExp);
+
+        PlayerController.Instance.ActivateUpgradePicker();
     }
 
     private int CalculateRequiredExp()
