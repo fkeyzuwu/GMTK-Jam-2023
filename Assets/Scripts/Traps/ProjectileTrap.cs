@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using Unity.VisualScripting;
 using UnityEngine;
 using static RandomMultipleRange;
 
@@ -16,6 +17,8 @@ public class ProjectileTrap : MonoBehaviour
     private Rigidbody2D body;
     private Vector3 targetPos;
 
+    private bool isMagnetized = false;
+
     public void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -24,8 +27,9 @@ public class ProjectileTrap : MonoBehaviour
         float offsetX = RandomMultipleRange.RandomValueFromRanges(new Range(-maxOffset, -minOffset), new Range(minOffset, maxOffset));
         float offsetY = RandomMultipleRange.RandomValueFromRanges(new Range(-maxOffset, -minOffset), new Range(minOffset, maxOffset));
         Vector3 direction = (new Vector2(targetPos.x - transform.position.x + offsetX, targetPos.y - transform.position.y + offsetY)).normalized;
-        transform.up = direction;
         body.velocity = new Vector2(direction.x, direction.y).normalized * speed;
+        transform.up = direction;
+        speed -= Time.deltaTime / 3;
     }
 
     public void Update()
@@ -33,6 +37,15 @@ public class ProjectileTrap : MonoBehaviour
         lifetime += Time.deltaTime;
         if (lifetime > resetTime)
             Destroy(gameObject);
+
+        if (isMagnetized)
+        {
+            targetPos = PlayerController.Instance.transform.position;
+            Vector2 directionToPlayer = new Vector2(targetPos.x - transform.position.x, targetPos.y - transform.position.y).normalized;
+            Vector2 lerpedDirection = Vector2.Lerp(body.velocity.normalized, directionToPlayer, Time.deltaTime * 5);
+            body.velocity = lerpedDirection * speed;
+            transform.up = lerpedDirection;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +54,18 @@ public class ProjectileTrap : MonoBehaviour
         {
             collision.GetComponent<PlayerHealth>().TakeDamage(damage);
             Destroy(gameObject);
+        }
+        else if (collision.CompareTag("MagnetRadius"))
+        {
+            isMagnetized = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MagnetRadius"))
+        {
+            isMagnetized = false;
         }
     }
 }
