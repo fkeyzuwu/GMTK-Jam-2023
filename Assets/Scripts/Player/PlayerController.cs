@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float speed = 5.0f;
 
+    [Header("Interactions")]
+    [SerializeField] private float interactionRadius = 0.5f;
+
     public Rigidbody2D body { get; private set; }
     public BoxCollider2D boxCollider { get; private set; }
     public bool isWalking { get; private set; }
@@ -35,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDeltaInput;
 
     [Header("Health")]
-    [SerializeField] private PlayerHealth health;
+    public PlayerHealth health;
 
     void Start()
     {
@@ -58,4 +61,17 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(moveDeltaInput.x, moveDeltaInput.y).normalized * speed;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.GetComponent<Pickable>())
+        {
+            collision.transform.GetComponent<Pickable>().PickUp();
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, interactionRadius);
+    }
 }

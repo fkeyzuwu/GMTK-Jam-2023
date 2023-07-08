@@ -4,17 +4,34 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public static SpawnManager Instance;
+    
+
+    #region Singleton
+    public static SpawnManager Instance { get; private set; }
+    Camera camera;
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+            camera = Camera.main;
+        }
+    }
+    #endregion
 
     public int minOffsetSpawn = -10;
     public int maxOffsetSpawn =  10;
 
-    Camera camera;
+   
     // Start is called before the first frame update
     void Start()
     {
-        camera = Camera.main;
-        Instance = this;
+        
+
     }
 
     public void SpawnSpawnable(GameObject[] spawnables, int amount)
@@ -26,9 +43,8 @@ public class SpawnManager : MonoBehaviour
             randomSpotision3.x = Mathf.Clamp01(randomSpotision3.x) + Random.Range(minOffsetSpawn, maxOffsetSpawn);
             randomSpotision3.y = Mathf.Clamp01(randomSpotision3.y) + Random.Range(minOffsetSpawn, maxOffsetSpawn);
 
-            int randomIndex = Random.Range(0, spawnables.Length);
 
-            Instantiate(spawnables[randomIndex], randomSpotision3, Quaternion.identity);
+            Instantiate(spawnables[Random.Range(0, spawnables.Length)], randomSpotision3, Quaternion.identity);
         }
     }
 }
