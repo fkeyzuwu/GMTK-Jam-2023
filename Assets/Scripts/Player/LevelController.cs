@@ -44,17 +44,17 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    public void LevelUp()
-    {
-        level++;
-        currentExp = Mathf.RoundToInt(currentExp - requiredExp);
-        requiredExp = CalculateRequiredExp();
-    }
-
     public void GainExperience(float exp)
     {
         float multiplier = (1 + (int)(level / levelScaleExpGain) * gainExpMultiplier);
         currentExp += exp * multiplier;
+    }
+
+    private void LevelUp()
+    {
+        level++;
+        currentExp = Mathf.RoundToInt(currentExp - requiredExp);
+        requiredExp = CalculateRequiredExp();
     }
 
     private int CalculateRequiredExp()
