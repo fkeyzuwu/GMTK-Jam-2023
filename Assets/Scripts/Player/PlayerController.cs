@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 moveDeltaInput;
 
+    [Header("Health")]
+    [SerializeField] private PlayerHealth health;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
