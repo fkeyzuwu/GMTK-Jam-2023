@@ -29,6 +29,10 @@ public abstract class Upgrade
         if(upgradeData.IsStackable || isFinished || stacks == 0)
         {
             stacks++;
+
+            if (upgradeData.IsMaxStackLimited && stacks >= upgradeData.MaxStack)
+                obj.GetComponent<UpgradeSystem>().RemoveUpgradeFromList(upgradeData);
+
             ApplyEffect();
         }
         
