@@ -9,6 +9,8 @@ public class ProjectileTrap : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
+    [SerializeField] private int minOffset = 5;
+    [SerializeField] private int maxOffset = 10;
 
     private float lifetime;
     private Rigidbody2D body;
@@ -19,8 +21,8 @@ public class ProjectileTrap : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         lifetime = 0;
         targetPos = PlayerController.Instance.transform.position;
-        float offsetX = RandomMultipleRange.RandomValueFromRanges(new Range(-10, -5), new Range(5, 10));
-        float offsetY = RandomMultipleRange.RandomValueFromRanges(new Range(-10, -5), new Range(5, 10));
+        float offsetX = RandomMultipleRange.RandomValueFromRanges(new Range(-maxOffset, -minOffset), new Range(minOffset, maxOffset));
+        float offsetY = RandomMultipleRange.RandomValueFromRanges(new Range(-maxOffset, -minOffset), new Range(minOffset, maxOffset));
         Vector3 direction = (new Vector2(targetPos.x - transform.position.x + offsetX, targetPos.y - transform.position.y + offsetY)).normalized;
         transform.up = direction;
         body.velocity = new Vector2(direction.x, direction.y).normalized * speed;
