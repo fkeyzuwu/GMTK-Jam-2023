@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2c79e855f2ac447a7434211dc94d46, type: 3}
-  m_Name: Magnet
+  m_Script: {fileID: 11500000, guid: bb957046d29232e45b3a20689658db6b, type: 3}
+  m_Name: Poison
   m_EditorClassIdentifier: 
-  Name: Magnet
-  Description: 
+  Name: Poison
+  Description: Deals 1% of max health in damage
   Icon: {fileID: 0}
   Duration: 0
   IsTimed: 0
   IsStackable: 1
   IsDurationExtending: 0
-  radius: 1
+  damagePercentPerTick: 1
+  tickIntervalSeconds: 1

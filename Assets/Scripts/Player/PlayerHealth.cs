@@ -5,8 +5,8 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
-    private int currentHealth;
+    [SerializeField] public float maxHealth;
+    private float currentHealth;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private HealthText healthText;
 
@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
         healthText.SetTextHealth(currentHealth, currentHealth);
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, currentHealth);
@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void Heal(int amount) 
+    public void Heal(float amount) 
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, currentHealth, maxHealth);
         healthBar.SetHealth(currentHealth);
