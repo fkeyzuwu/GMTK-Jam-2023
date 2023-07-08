@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8509496554496392838}
   - component: {fileID: 6722925363792557749}
   - component: {fileID: 5504408586403268643}
+  - component: {fileID: 558232825090492021}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -128,6 +129,9 @@ MonoBehaviour:
   divisionMultiplier: 7
   gainExpMultiplier: 0.1
   levelScaleExpGain: 5
+  experienceBar: {fileID: 0}
+  experienceText: {fileID: 0}
+  lvlText: {fileID: 0}
 --- !u!114 &8509496554496392838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  interactionRadius: 0.5
   health: {fileID: 6722925363792557749}
 --- !u!114 &6722925363792557749
 MonoBehaviour:
@@ -155,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1000
+  healthBar: {fileID: 0}
   healthText: {fileID: 0}
 --- !u!114 &5504408586403268643
 MonoBehaviour:
@@ -169,6 +175,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 854852590304997702}
+--- !u!114 &558232825090492021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479337178158933921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61caa064600dcae448f69be46fe2f64d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleUpgrades: []
+  playerBaseUpgradeStats:
+    magnetRadius: 0
 --- !u!1 &2585207945780940921
 GameObject:
   m_ObjectHideFlags: 0
