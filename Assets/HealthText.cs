@@ -7,8 +7,8 @@ public class HealthText : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
 
-    public void SetTextHealth(int currentHealth, int maxHealth)
+    public void SetTextHealth(float currentHealth, float maxHealth)
     {
-        healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
+        healthText.text = ((int)currentHealth).ToString() + " / " + ((int)maxHealth).ToString();
     }
 }

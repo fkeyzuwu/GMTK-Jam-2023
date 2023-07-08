@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     #region Singleton
     public static SpawnManager Instance { get; private set; }
-    Camera camera;
+    private new Camera camera;
     private void Awake()
     {
         if (Instance != null && Instance != this)

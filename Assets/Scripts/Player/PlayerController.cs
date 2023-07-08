@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     [Header("Movement")]
-    [SerializeField] private float speed = 5.0f;
+    public float speed = 5.0f;
 
     [Header("Interactions")]
     [SerializeField] private float interactionRadius = 0.5f;
