@@ -42,24 +42,9 @@ public class ProjectileTrap : MonoBehaviour
         {
             targetPos = PlayerController.Instance.transform.position;
             Vector2 directionToPlayer = new Vector2(targetPos.x - transform.position.x, targetPos.y - transform.position.y).normalized;
-            Vector2 directionNow = body.velocity.normalized;
-            float angleToPlayer =  Mathf.Atan(directionToPlayer.y / directionToPlayer.x) % (2*Mathf.PI);
-            float angleNow = Mathf.Atan(directionNow.y /directionNow.x) % (2 * Mathf.PI);
-            float p = 0.04f;
-
-            float angleTransition = angleNow + p * (angleToPlayer - angleNow);
-            Vector2 directionTransition = new Vector2(Mathf.Cos(angleTransition), Mathf.Sin(angleTransition));
-
-            if (transform.position.x <= targetPos.x)
-            {
-                body.velocity = directionTransition * speed;
-                transform.up = directionTransition;
-            }
-            else
-            {
-                body.velocity = -directionTransition * speed;
-                transform.up = -directionTransition;
-            }
+            Vector2 lerpedDirection = Vector2.Lerp(body.velocity.normalized, directionToPlayer, Time.deltaTime * 5);
+            body.velocity = lerpedDirection * speed;
+            transform.up = lerpedDirection;
         }
     }
 
