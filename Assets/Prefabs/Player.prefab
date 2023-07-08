@@ -38,7 +38,7 @@ Transform:
   - {fileID: 6729120904621694238}
   - {fileID: 2108759571614235598}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6478131087041963616
 Rigidbody2D:
@@ -189,7 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61caa064600dcae448f69be46fe2f64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleUpgrades: []
+  possibleUpgrades:
+  - {fileID: 11400000, guid: be680d9912365db48864b50e6ed46cca, type: 2}
 --- !u!1 &2585207945780940921
 GameObject:
   m_ObjectHideFlags: 0
