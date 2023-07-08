@@ -11,21 +11,6 @@ public class UpgradeSystem : MonoBehaviour
 
     #endregion
 
-    #region Stats Handlers
-
-    [System.Serializable]
-    public struct BaseUpgradeStats
-    {
-        public float magnetRadius;
-    }
-
-    public BaseUpgradeStats playerBaseUpgradeStats = new BaseUpgradeStats()
-    {
-        magnetRadius = 0f
-    };
-
-    #endregion
-
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))

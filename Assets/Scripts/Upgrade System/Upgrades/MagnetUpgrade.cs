@@ -12,13 +12,9 @@ public class MagnetUpgrade : Upgrade
 
     public override void ApplyEffect() // TODO: Apply Magnet Addition Logic
     {
-        upgradeSystem.playerBaseUpgradeStats.magnetRadius += ((MagnetData)upgradeData).radius;
+        CircleCollider2D collider = upgradeSystem.transform.Find("MagnetRadius").GetComponent<CircleCollider2D>();
+        collider.radius += 1;
     }
 
-    public override void EndEffect() // TODO: Apply Magnet Removal Logic
-    {
-        upgradeSystem.playerBaseUpgradeStats.magnetRadius -= ((MagnetData)upgradeData).radius;
-    }
-
-
+    public override void EndEffect() { }
 }

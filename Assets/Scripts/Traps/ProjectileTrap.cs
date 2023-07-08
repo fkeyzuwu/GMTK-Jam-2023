@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using Unity.VisualScripting;
 using UnityEngine;
 using static RandomMultipleRange;
 
@@ -15,6 +16,8 @@ public class ProjectileTrap : MonoBehaviour
     private float lifetime;
     private Rigidbody2D body;
     private Vector3 targetPos;
+
+    private bool isMagnetized = false;
 
     public void Start()
     {
@@ -33,6 +36,13 @@ public class ProjectileTrap : MonoBehaviour
         lifetime += Time.deltaTime;
         if (lifetime > resetTime)
             Destroy(gameObject);
+
+        if (isMagnetized)
+        {
+            targetPos = PlayerController.Instance.transform.position;
+            Vector2 direction = new Vector2(targetPos.x - transform.position.x, targetPos.y - transform.position.y).normalized;
+            body.velocity = new Vector2(direction.x, direction.y) * speed;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +51,18 @@ public class ProjectileTrap : MonoBehaviour
         {
             collision.GetComponent<PlayerHealth>().TakeDamage(damage);
             Destroy(gameObject);
+        }
+        else if (collision.CompareTag("MagnetRadius"))
+        {
+            isMagnetized = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MagnetRadius"))
+        {
+            isMagnetized = false;
         }
     }
 }
