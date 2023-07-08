@@ -26,21 +26,12 @@ public abstract class Upgrade
 
     public void Activate()
     {
-        if (stacks == 0)
+        if(upgradeData.IsStackable || isFinished || stacks == 0)
         {
             ApplyEffect();
             stacks++;
-            return;
         }
-        else
-        {
-            if(upgradeData.IsStackable || isFinished)
-            {
-                ApplyEffect();
-                stacks++;
-            }
-        }
-
+        
         if(upgradeData.IsDurationExtending || isFinished)
         {
             duration += upgradeData.Duration;
