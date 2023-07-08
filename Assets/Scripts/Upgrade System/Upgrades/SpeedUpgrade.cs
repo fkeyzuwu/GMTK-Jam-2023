@@ -10,12 +10,12 @@ public class SpeedUpgrade : Upgrade
         upgradeSystem = obj.GetComponent<UpgradeSystem>();
     }
 
-    public override void ApplyEffect() // TODO: Apply Magnet Addition Logic
+    public override void ApplyEffect()
     {
        PlayerController.Instance.speed += ((SpeedData)upgradeData).speedAddition;
     }
 
-    public override void EndEffect() // TODO: Apply Magnet Removal Logic
+    public override void EndEffect()
     {
         PlayerController.Instance.speed -= ((SpeedData)upgradeData).speedAddition;
     }
