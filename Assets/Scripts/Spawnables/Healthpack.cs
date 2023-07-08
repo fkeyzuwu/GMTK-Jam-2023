@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
-public class Healthpack : MonoBehaviour
+public class Healthpack : Pickable
 {
+    public int healAmount = 100;
+
     [SerializeField] private float spawnExpandDuration = 0.75f;
     [SerializeField] private float rotationDegrees = 20f;
     [SerializeField] private float scaleSpeed = 30f;
@@ -30,5 +33,9 @@ public class Healthpack : MonoBehaviour
             float sineValue = (Mathf.Sin(Time.time * scaleSpeed) + 1) * 0.25f + 0.5f;
             transform.localScale = new Vector2(sineValue, sineValue);
         }
+    }
+    public override void OnPickUpEffect()
+    {
+        PlayerController.Instance.health.Heal(healAmount);
     }
 }
