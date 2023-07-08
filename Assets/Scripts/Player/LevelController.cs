@@ -27,13 +27,21 @@ public class LevelController : MonoBehaviour
     [SerializeField]
     private int levelScaleExpGain = 5;
 
-    private float currentExp;
-    private float requiredExp;
+    private int currentExp;
+    private int requiredExp;
+
+    [SerializeField] private ExperienceBar experienceBar;
+    [SerializeField] private ExperienceText experienceText;
+    [SerializeField] private LvLText lvlText;
 
     private void Start()
     {
         currentExp = 0;
         requiredExp = CalculateRequiredExp();
+        experienceBar.SetMaxExperience(requiredExp);
+        experienceBar.SetExperience(currentExp);
+        experienceText.SetTextExperience(currentExp, requiredExp);
+        lvlText.SetTextLvL(level);
     }
 
     private void Update()
@@ -47,7 +55,11 @@ public class LevelController : MonoBehaviour
     public void GainExperience(float exp)
     {
         float multiplier = (1 + (int)(level / levelScaleExpGain) * gainExpMultiplier);
-        currentExp += exp * multiplier;
+        currentExp += (int)(exp * multiplier);
+        experienceBar.SetMaxExperience(requiredExp);
+        experienceBar.SetExperience(currentExp);
+        experienceText.SetTextExperience(currentExp, requiredExp);
+        lvlText.SetTextLvL(level);
     }
 
     private void LevelUp()
@@ -55,6 +67,8 @@ public class LevelController : MonoBehaviour
         level++;
         currentExp = Mathf.RoundToInt(currentExp - requiredExp);
         requiredExp = CalculateRequiredExp();
+        experienceBar.SetExperience(currentExp);
+        experienceText.SetTextExperience(currentExp, requiredExp);
     }
 
     private int CalculateRequiredExp()
