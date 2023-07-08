@@ -522,7 +522,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 5.44
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -676,12 +676,28 @@ PrefabInstance:
       objectReference: {fileID: 396573139}
     - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
       propertyPath: possibleUpgrades.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
       propertyPath: possibleUpgrades.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: e551c5d745e825a4ba8bd4c77ed706db, type: 2}
+    - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
+      propertyPath: possibleUpgrades.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a7b1c76989464c42860cf047539bf25, type: 2}
+    - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
+      propertyPath: possibleUpgrades.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: be680d9912365db48864b50e6ed46cca, type: 2}
+    - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
+      propertyPath: possibleUpgrades.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: c970f8a5de88e094a9ca76cb231dc337, type: 2}
+    - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
+      propertyPath: possibleUpgrades.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: c944c571c7ea7ef44b42f79b877f03d4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -15,8 +15,10 @@ MonoBehaviour:
   Name: Magnet
   Description: 
   Icon: {fileID: 0}
-  Duration: 0
   IsTimed: 0
+  Duration: 0
   IsStackable: 1
   IsDurationExtending: 0
+  IsMaxStackLimited: 1
+  MaxStack: 3
   radius: 1
