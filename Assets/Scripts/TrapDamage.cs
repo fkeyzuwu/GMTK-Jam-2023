@@ -13,7 +13,6 @@ public class TrapDamage : MonoBehaviour
     [SerializeField] float cooldownAttack;
 
     protected float cooldownTimer;
-    
 
     protected void Start()
     {
@@ -47,9 +46,6 @@ public class TrapDamage : MonoBehaviour
             isDamaging = true;
             
         }
-        
-
-        //collision.GetComponent<HealthScript>().TakeDamage(damage);
     }
 
     protected void OnTriggerExit2D(Collider2D collision)
@@ -58,16 +54,11 @@ public class TrapDamage : MonoBehaviour
         {
             isDamaging = false;
         }
-
     }
 
     protected void DamagePlayer()
     {
         Debug.Log("Plater IS Damaged");
         PlayerController.Instance.health.TakeDamage(damage);
-
     }
-
-    
-
 }
