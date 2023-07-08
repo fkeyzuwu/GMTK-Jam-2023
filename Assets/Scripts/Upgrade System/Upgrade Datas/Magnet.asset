@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Magnet
   m_EditorClassIdentifier: 
   Name: Magnet
-  Description: 
-  Icon: {fileID: 0}
+  Description: Pull bullets towards you!
+  Icon: {fileID: 21300000, guid: 2b4ec6a367ba95340a2ba0544fc5c89c, type: 3}
   Duration: 0
   IsTimed: 0
   IsStackable: 1

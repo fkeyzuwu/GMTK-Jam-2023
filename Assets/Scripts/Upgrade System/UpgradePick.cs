@@ -14,6 +14,8 @@ public class UpgradePick : MonoBehaviour
 
     public void UpdatePick(UpgradeData upgradeData)
     {
-
+        titleText.text = upgradeData.Name;
+        descriptionText.text = upgradeData.Description;
+        image.sprite = upgradeData.Icon;
     }
 }
