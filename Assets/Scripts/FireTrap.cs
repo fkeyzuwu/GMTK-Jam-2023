@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class FireTrap : TrapDamage
 {
-    // Start is called before the first frame update
-
-
 
 }
