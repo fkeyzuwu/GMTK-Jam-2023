@@ -38,7 +38,7 @@ Transform:
   - {fileID: 6729120904621694238}
   - {fileID: 2108759571614235598}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6478131087041963616
 Rigidbody2D:
@@ -149,6 +149,7 @@ MonoBehaviour:
   speed: 5
   interactionRadius: 0.5
   health: {fileID: 6722925363792557749}
+  upgradeSystem: {fileID: 8505726090542584884}
 --- !u!114 &6722925363792557749
 MonoBehaviour:
   m_ObjectHideFlags: 0
