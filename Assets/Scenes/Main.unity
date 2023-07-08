@@ -630,6 +630,14 @@ PrefabInstance:
       propertyPath: experienceText
       value: 
       objectReference: {fileID: 396573139}
+    - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
+      propertyPath: possibleUpgrades.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505726090542584884, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
+      propertyPath: possibleUpgrades.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e551c5d745e825a4ba8bd4c77ed706db, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
