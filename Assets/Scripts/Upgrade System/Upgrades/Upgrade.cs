@@ -28,8 +28,8 @@ public abstract class Upgrade
     {
         if(upgradeData.IsStackable || isFinished || stacks == 0)
         {
-            ApplyEffect();
             stacks++;
+            ApplyEffect();
         }
         
         if(upgradeData.IsDurationExtending || isFinished)

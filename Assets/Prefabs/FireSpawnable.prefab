@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
-  durationKeepAlive: 15
+  durationKeepAlive: 10
   cooldownAttack: 5
 --- !u!61 &7589767827263685788
 BoxCollider2D:
