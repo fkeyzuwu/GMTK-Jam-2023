@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagnetFieldDrawer : MonoBehaviour
 {
     [SerializeField] SpriteRenderer magnetField;
-    [SerializeField] CircleCollider2D collider;
+    [SerializeField] new CircleCollider2D collider;
     public void UpgradeMagnetField()
     {
         collider.enabled = true;
