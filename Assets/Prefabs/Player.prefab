@@ -38,7 +38,7 @@ Transform:
   - {fileID: 6729120904621694238}
   - {fileID: 2108759571614235598}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6478131087041963616
 Rigidbody2D:
@@ -150,6 +150,7 @@ MonoBehaviour:
   interactionRadius: 0.5
   health: {fileID: 6722925363792557749}
   upgradeSystem: {fileID: 8505726090542584884}
+  upgradePicker: {fileID: 0}
 --- !u!114 &6722925363792557749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +192,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleUpgrades:
+  - {fileID: 11400000, guid: e551c5d745e825a4ba8bd4c77ed706db, type: 2}
+  - {fileID: 11400000, guid: be680d9912365db48864b50e6ed46cca, type: 2}
+  - {fileID: 11400000, guid: c970f8a5de88e094a9ca76cb231dc337, type: 2}
   - {fileID: 11400000, guid: 9f423149b1636b1438e0fc2f85c60f07, type: 2}
+  - {fileID: 11400000, guid: c944c571c7ea7ef44b42f79b877f03d4, type: 2}
+  - {fileID: 11400000, guid: 4a7b1c76989464c42860cf047539bf25, type: 2}
 --- !u!1 &2585207945780940921
 GameObject:
   m_ObjectHideFlags: 0
