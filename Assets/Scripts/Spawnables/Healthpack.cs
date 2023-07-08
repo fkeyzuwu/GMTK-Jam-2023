@@ -11,6 +11,8 @@ public class Healthpack : Pickable
     [SerializeField] private float rotationDegrees = 20f;
     [SerializeField] private float scaleSpeed = 30f;
 
+    private float rotationPhase = 0f;
+
     private bool finisheScaling = false;
     private void Start()
     {
@@ -23,9 +25,11 @@ public class Healthpack : Pickable
 
     private void Update()
     {
-        float rotateSine = Mathf.Sin(Time.time * 1.1f);
+        float rotateSine = Mathf.Sin(rotationPhase);
+        rotationPhase += Time.deltaTime * 1.2f;
         float rotation = (rotateSine * Time.deltaTime * rotationDegrees);
         transform.Rotate(0, 0, rotation);
+
         if (finisheScaling)
         {
             float sineValue = (Mathf.Sin(Time.time * scaleSpeed) + 1) * 0.25f + 0.5f;
