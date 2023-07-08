@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7118137798425264709
 MonoBehaviour:
@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4c3d5bd16c42b49afc718ce38309ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawnables: []
-  amount: 0
+  Spawnables:
+  - {fileID: 3774754055817414316, guid: 94c6cb8c461cb574d8658fe1aeb2c243, type: 3}
+  amount: 1
   maxWaitTime: 10
   minWaitTime: 2
+  minOffsetSpawn: -10
+  maxOffsetSpawn: 10
+  spawnInsideBounds: 1
