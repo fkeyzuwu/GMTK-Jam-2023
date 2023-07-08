@@ -7,11 +7,13 @@ using UnityEngine;
 public class TrapDamage : MonoBehaviour
 {
 
-    [SerializeField] protected float damage;
+    [SerializeField] protected int damage;
     protected bool isDamaging = false;
     [SerializeField] float durationKeepAlive = 15f;
     [SerializeField] float cooldownAttack;
+
     protected float cooldownTimer;
+    
 
     protected void Start()
     {
@@ -43,6 +45,7 @@ public class TrapDamage : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isDamaging = true;
+            
         }
         
 
@@ -61,6 +64,8 @@ public class TrapDamage : MonoBehaviour
     protected void DamagePlayer()
     {
         Debug.Log("Plater IS Damaged");
+        PlayerController.Instance.health.TakeDamage(damage);
+
     }
 
     

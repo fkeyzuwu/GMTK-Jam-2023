@@ -7,18 +7,23 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     private int currentHealth;
-    [SerializeField] private TextMeshProUGUI healthText;
-    
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private HealthText healthText;
+
+
     private void Start()
     {
         currentHealth = maxHealth;
-        healthText.text = currentHealth.ToString();
+        healthBar.SetMaxHealth(currentHealth);
+        healthText.SetTextHealth(currentHealth, currentHealth);
     }
+
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, currentHealth);
-        healthText.text = currentHealth.ToString();
+        healthBar.SetHealth(currentHealth);
+        healthText.SetTextHealth(currentHealth, maxHealth);
         if (currentHealth <= 0)
         {
             print("You win!");
@@ -27,7 +32,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(int amount) 
     {
-        currentHealth += amount;
-        healthText.text = currentHealth.ToString();
+        currentHealth = Mathf.Clamp(currentHealth + amount, currentHealth, maxHealth);
+        healthBar.SetHealth(currentHealth);
+        healthText.SetTextHealth(currentHealth, maxHealth);
     }
 }
