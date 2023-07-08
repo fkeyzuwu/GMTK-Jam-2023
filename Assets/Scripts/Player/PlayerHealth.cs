@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        healthText.text = currentHealth.ToString();
     }
     public void TakeDamage(int amount)
     {
