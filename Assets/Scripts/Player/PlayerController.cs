@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDeltaInput;
 
     [Header("Health")]
-    [SerializeField] private PlayerHealth health;
+    public PlayerHealth health;
 
     void Start()
     {
