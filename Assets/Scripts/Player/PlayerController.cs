@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
     [Header("Health")]
     public PlayerHealth health;
 
+    [Header("Health")]
+    public UpgradeSystem upgradeSystem;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();

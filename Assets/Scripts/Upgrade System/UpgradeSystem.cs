@@ -30,7 +30,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            GenerateRandomUpgrade();
+            //GenerateRandomUpgrade();
         }
 
         foreach(Upgrade upgrade in activeUpgrades.Values)
@@ -43,17 +43,24 @@ public class UpgradeSystem : MonoBehaviour
         }
     }
     
-    public void GenerateRandomUpgrade()
+    public List<UpgradeData> GenerateRandomUpgrades(int amount)
     {
         if (possibleUpgrades.Count > 0)
         {
-            int randomUpgradeIndex = UnityEngine.Random.Range(0, possibleUpgrades.Count);
+            List<UpgradeData> randomUpgrades = new List<UpgradeData>();
 
-            AddUpgrade(possibleUpgrades[randomUpgradeIndex]);
+            for (int i = 0; i < amount; i++)
+            {
+                int randomUpgradeIndex = UnityEngine.Random.Range(0, possibleUpgrades.Count);
+                randomUpgrades.Add(possibleUpgrades[randomUpgradeIndex]);
+            }
+            
+            return randomUpgrades;
         } 
         else
         {
             Debug.LogError("[UpgradeSystemError] No upgrades attached to the 'Possible Upgrades List' on the upgrade system attached to the player.");
+            return null;
         }
     }
 
