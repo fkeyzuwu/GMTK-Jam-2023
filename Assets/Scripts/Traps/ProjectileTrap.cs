@@ -27,8 +27,9 @@ public class ProjectileTrap : MonoBehaviour
         float offsetX = RandomMultipleRange.RandomValueFromRanges(new Range(-maxOffset, -minOffset), new Range(minOffset, maxOffset));
         float offsetY = RandomMultipleRange.RandomValueFromRanges(new Range(-maxOffset, -minOffset), new Range(minOffset, maxOffset));
         Vector3 direction = (new Vector2(targetPos.x - transform.position.x + offsetX, targetPos.y - transform.position.y + offsetY)).normalized;
-        transform.up = direction;
         body.velocity = new Vector2(direction.x, direction.y).normalized * speed;
+        transform.up = direction;
+        speed -= Time.deltaTime / 3;
     }
 
     public void Update()
@@ -40,8 +41,25 @@ public class ProjectileTrap : MonoBehaviour
         if (isMagnetized)
         {
             targetPos = PlayerController.Instance.transform.position;
-            Vector2 direction = new Vector2(targetPos.x - transform.position.x, targetPos.y - transform.position.y).normalized;
-            body.velocity = new Vector2(direction.x, direction.y) * speed;
+            Vector2 directionToPlayer = new Vector2(targetPos.x - transform.position.x, targetPos.y - transform.position.y).normalized;
+            Vector2 directionNow = body.velocity.normalized;
+            float angleToPlayer =  Mathf.Atan(directionToPlayer.y / directionToPlayer.x) % (2*Mathf.PI);
+            float angleNow = Mathf.Atan(directionNow.y /directionNow.x) % (2 * Mathf.PI);
+            float p = 0.04f;
+
+            float angleTransition = angleNow + p * (angleToPlayer - angleNow);
+            Vector2 directionTransition = new Vector2(Mathf.Cos(angleTransition), Mathf.Sin(angleTransition));
+
+            if (transform.position.x <= targetPos.x)
+            {
+                body.velocity = directionTransition * speed;
+                transform.up = directionTransition;
+            }
+            else
+            {
+                body.velocity = -directionTransition * speed;
+                transform.up = -directionTransition;
+            }
         }
     }
 
