@@ -18,6 +18,5 @@ public class Pickable : MonoBehaviour
     
     public virtual void OnPickUpEffect()
     {
-        Debug.Log("Picked up " + gameObject.tag);
     }
 }

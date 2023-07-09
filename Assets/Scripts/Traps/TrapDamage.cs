@@ -58,7 +58,6 @@ public class TrapDamage : MonoBehaviour
 
     protected void DamagePlayer()
     {
-        Debug.Log("Plater IS Damaged");
         PlayerController.Instance.health.TakeDamage(damage);
     }
 }
