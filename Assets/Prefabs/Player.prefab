@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1000
+  critChance: 0
   healthBar: {fileID: 0}
   healthText: {fileID: 0}
 --- !u!114 &5504408586403268643
@@ -198,6 +199,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9f423149b1636b1438e0fc2f85c60f07, type: 2}
   - {fileID: 11400000, guid: c944c571c7ea7ef44b42f79b877f03d4, type: 2}
   - {fileID: 11400000, guid: 4a7b1c76989464c42860cf047539bf25, type: 2}
+  - {fileID: 11400000, guid: d47f372290edd29429cc7fae47a9c771, type: 2}
 --- !u!1 &2585207945780940921
 GameObject:
   m_ObjectHideFlags: 0

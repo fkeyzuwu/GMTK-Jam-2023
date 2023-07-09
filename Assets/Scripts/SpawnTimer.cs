@@ -22,7 +22,7 @@ public class SpawnTimer : MonoBehaviour
         while (true)
         {
             int randomWaitTime = Random.Range(minWaitTime, maxWaitTime);
-            SpawnManager.Instance.SpawnSpawnable(Spawnables, 1, minOffsetSpawn, maxOffsetSpawn, spawnInsideBounds);
+            SpawnManager.Instance.SpawnSpawnable(Spawnables, amount, minOffsetSpawn, maxOffsetSpawn, spawnInsideBounds);
             yield return new WaitForSeconds(randomWaitTime);
         }
     }
