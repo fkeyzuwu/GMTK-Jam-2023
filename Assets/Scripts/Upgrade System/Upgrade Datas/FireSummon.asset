@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7023361bd502b3a4398d3fde05f3dd53, type: 3}
   m_Name: FireSummon
   m_EditorClassIdentifier: 
-  Name: Fire Summon
-  Description: Summon fires around the player
+  Name: Call the firefighters!!
+  Description: Summon fires around the player.
   Icon: {fileID: 0}
-  Duration: 0
   IsTimed: 0
+  Duration: 0
   IsStackable: 1
   IsDurationExtending: 0
+  IsMaxStackLimited: 0
+  MaxStack: 0
   tickIntervalSeconds: 25
   amount: 3
   prefab: {fileID: 8210476448417002647, guid: ecdf8b7acafa3b847b36541e8ad6332b, type: 3}

@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d421c96a789f841f39f0fda315a5fc82, type: 3}
   m_Name: SpeedUpgradeData
   m_EditorClassIdentifier: 
-  Name: Speed Upgrade
-  Duration: 0
+  Name: Speedster
+  Description: Make you go ZOOM ZOOM!
+  Icon: {fileID: 21300000, guid: e9d933a0cb7c8ab4d8ff54a7b0998f18, type: 3}
   IsTimed: 0
+  Duration: 0
   IsStackable: 0
   IsDurationExtending: 0
+  IsMaxStackLimited: 0
+  MaxStack: 0
   speedAddition: 5
