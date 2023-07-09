@@ -19,8 +19,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private HealthText healthText;
 
+    public GameObject gameWinScreen;
+
     private void Start()
     {
+        Time.timeScale = 1f;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(currentHealth);
         healthText.SetTextHealth(currentHealth, currentHealth);
@@ -33,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
                 amount *= 2;
 
         currentHealth -= amount;
+        currentHealth -= 200;
         currentHealth = Mathf.Clamp(currentHealth, 0, currentHealth);
         healthBar.SetHealth(currentHealth);
         healthText.SetTextHealth(currentHealth, maxHealth);
@@ -40,7 +44,9 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(ChangePlayerColor(damageColor));
         if (currentHealth <= 0)
         {
-            print("You win!");
+            gameWinScreen.SetActive(true); //you win
+            gameWinScreen.GetComponent<GameWinScreen>().UpdateTimer();
+            Time.timeScale = 0f;
         }
     }
 
