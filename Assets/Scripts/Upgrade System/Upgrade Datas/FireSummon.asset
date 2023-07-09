@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7023361bd502b3a4398d3fde05f3dd53, type: 3}
   m_Name: FireSummon
   m_EditorClassIdentifier: 
-  Name: Call the firefighters!!
-  Description: Summon fires around the player.
+  Name: Pyromaniac
+  Description: 'Occasionally set fires around you '
   Duration: 0
   MaxStack: 0
   Icon: {fileID: 1571715120, guid: 7fdc3097a2b8706479b1a4d80cc6882b, type: 3}

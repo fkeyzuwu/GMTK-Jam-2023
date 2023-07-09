@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PoisonSummon
   m_EditorClassIdentifier: 
   Name: Toxic Trails
-  Description: Summon poison storms around the player.
+  Description: Occasionally summon poison gas around you
   Duration: 0
   MaxStack: 0
   Icon: {fileID: -939877522, guid: 791b94ef6f6b60e4388352ab1f8e9041, type: 3}
