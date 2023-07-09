@@ -9,7 +9,6 @@ public class PlayerHealth : MonoBehaviour
     private float currentHealth;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private HealthText healthText;
-    private int i;
 
     private void Start()
     {
