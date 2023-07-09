@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameWinScreen : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI highScoreText;
     public runTimer timer;
     public void UpdateTimer()
     {
-        timerText.text = timer.GetTimeFormat(timer.currentTime);
+        timer.CheckForHighscore();
+        timerText.text = "Time: " + timer.GetTimeFormat(timer.currentTime);
+        highScoreText.text = "High Score: " + timer.GetTimeFormat(maxScoreTimer.bestScoreTime);
     }
 
     public void MainMenu()

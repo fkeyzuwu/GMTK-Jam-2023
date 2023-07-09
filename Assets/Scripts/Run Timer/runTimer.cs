@@ -31,13 +31,12 @@ public class runTimer : MonoBehaviour
         return text;
     }
 
-    public string CheckForHighscore()
+    public void CheckForHighscore()
     {
-        if (maxScoreTimer.bestScoreTime < currentTime)
+        if (maxScoreTimer.bestScoreTime > currentTime)
         {
             maxScoreTimer.bestScoreTime = currentTime;
+            
         }
-        string text = GetTimeFormat(currentTime);
-        return text;
     }
 }
