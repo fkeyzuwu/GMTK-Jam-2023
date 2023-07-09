@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        AudioManager.Instance.PlayGameMusic();
     }
 
     void Update()
