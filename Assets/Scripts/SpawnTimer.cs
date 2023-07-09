@@ -8,6 +8,7 @@ public class SpawnTimer : MonoBehaviour
     public int amount;
     public int maxWaitTime = 10;
     public int minWaitTime = 2;
+    public int spawnAfterSeconds = 0;
     public float minOffsetSpawn = -10f;
     public float maxOffsetSpawn = 10f;
     public bool spawnInsideBounds;
@@ -19,6 +20,8 @@ public class SpawnTimer : MonoBehaviour
 
     IEnumerator SpawnObject()
     {
+        yield return new WaitForSeconds(spawnAfterSeconds);
+
         while (true)
         {
             int randomWaitTime = Random.Range(minWaitTime, maxWaitTime);

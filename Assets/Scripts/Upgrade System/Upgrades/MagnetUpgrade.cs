@@ -10,9 +10,9 @@ public class MagnetUpgrade : Upgrade
         upgradeSystem = obj.GetComponent<UpgradeSystem>();
     }
 
-    public override void ApplyEffect() // TODO: Apply Magnet Addition Logic
+    public override void ApplyEffect()
     {
-        upgradeSystem.transform.Find("MagnetRadius").GetComponent<MagnetFieldDrawer>().UpgradeMagnetField();
+        upgradeSystem.transform.Find("MagnetRadius").GetComponent<MagnetFieldDrawer>().UpgradeMagnetField(((MagnetData)upgradeData).radius);
     }
 
     public override void EndEffect() { }

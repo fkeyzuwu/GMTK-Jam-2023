@@ -15,10 +15,10 @@ MonoBehaviour:
   Name: Growth Shroom
   Description: Makes your bigger in size
   Duration: 0
-  MaxStack: 0
+  MaxStack: 5
   Icon: {fileID: 21300000, guid: 33beee12818d870419e3c20a4a8a53c1, type: 3}
   IsTimed: 0
   IsStackable: 1
   IsDurationExtending: 0
-  IsMaxStackLimited: 0
+  IsMaxStackLimited: 1
   multiplier: 1.2
