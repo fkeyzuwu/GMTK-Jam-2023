@@ -36,7 +36,6 @@ public class PlayerHealth : MonoBehaviour
                 amount *= 2;
 
         currentHealth -= amount;
-        currentHealth -= 200;
         currentHealth = Mathf.Clamp(currentHealth, 0, currentHealth);
         healthBar.SetHealth(currentHealth);
         healthText.SetTextHealth(currentHealth, maxHealth);
