@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1555237376744113824
 MonoBehaviour:
@@ -75,7 +75,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: af25351b6d1557040ba3a2e69f23c6c3, type: 3}
     volume: 0.265
-  - name: Magnetic Upgrade
+  - name: Magnet Upgrade
     source: {fileID: 0}
     clips:
     - {fileID: 8300000, guid: 3ef6dedcbded4314590d1356dd6a83c9, type: 3}
