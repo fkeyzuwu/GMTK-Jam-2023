@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     private float currentHealth;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private HealthText healthText;
-
+    private int i;
 
     private void Start()
     {
@@ -30,10 +30,25 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void Heal(float amount) 
+    public void Heal(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, currentHealth, maxHealth);
         healthBar.SetHealth(currentHealth);
         healthText.SetTextHealth(currentHealth, maxHealth);
+    }
+
+    public void StartHealOverTime(float amount, int amountToRepeat, int waitTimeBetweenIntervals)
+    {
+        StartCoroutine(HealOverTime(amount,amountToRepeat,waitTimeBetweenIntervals));
+    }
+
+    public IEnumerator HealOverTime(float amount,int amountToRepeat ,int waitTimeBetweenIntervals)
+    {
+        for (int i = 0; i < amountToRepeat; i++)
+        {
+            Heal(amount);
+            yield return new WaitForSeconds(waitTimeBetweenIntervals);
+        }
+        yield return null;
     }
 }
