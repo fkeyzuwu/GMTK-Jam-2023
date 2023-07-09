@@ -46,7 +46,7 @@ public class UpgradeSystem : MonoBehaviour
         {
             while (randomNumbers.Count < amount)
             {
-                int randomNum = Random.Range(0, maxNum);
+                int randomNum = Random.Range(0, maxNum - 1);
 
                 if (!randomNumbers.Contains(randomNum))
                     randomNumbers.Add(randomNum);
