@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 2066662072}
+    - target: {fileID: 6722925363792557749, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
+      propertyPath: gameWinScreen
+      value: 
+      objectReference: {fileID: 1224400293}
     - target: {fileID: 7575502170962858898, guid: d1dc95d5a1fb807469f15cdf3d2a1531, type: 3}
       propertyPath: lvlText
       value: 
@@ -902,6 +906,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72b1b1a2ad1144b42bb3d87ab450c227, type: 3}
+--- !u!1 &1224400293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2170996118685703074, guid: 72b1b1a2ad1144b42bb3d87ab450c227, type: 3}
+  m_PrefabInstance: {fileID: 1224400292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1456315826
 GameObject:
   m_ObjectHideFlags: 0
