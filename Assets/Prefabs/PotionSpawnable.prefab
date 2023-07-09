@@ -158,4 +158,4 @@ MonoBehaviour:
   tweenDuration: 0.2
   waitTimeBetweenIntervals: 3
   amountToRepeat: 3
-  HealAmount: 100
+  HealAmount: 20

@@ -100,12 +100,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7118137798425264709, guid: 52b5ceae94a2747408154d979433a541, type: 3}
       propertyPath: Spawnables.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118137798425264709, guid: 52b5ceae94a2747408154d979433a541, type: 3}
       propertyPath: Spawnables.Array.data[0]
       value: 
       objectReference: {fileID: 3774754055817414316, guid: 94c6cb8c461cb574d8658fe1aeb2c243, type: 3}
+    - target: {fileID: 7118137798425264709, guid: 52b5ceae94a2747408154d979433a541, type: 3}
+      propertyPath: Spawnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 501613683027489715, guid: f9e970581be73e04dbfafdea05b59422, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
