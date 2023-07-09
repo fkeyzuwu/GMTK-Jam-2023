@@ -9,6 +9,6 @@ public class LvLText : MonoBehaviour
 
     public void SetTextLvL(int lvl)
     {
-        lvlText.text = "LvL: " + lvl.ToString();
+        lvlText.text = lvl.ToString();
     }
 }
