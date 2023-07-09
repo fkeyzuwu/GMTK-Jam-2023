@@ -42,7 +42,7 @@ public class ProjectileTrap : MonoBehaviour
         {
             targetPos = PlayerController.Instance.transform.position;
             Vector2 directionToPlayer = new Vector2(targetPos.x - transform.position.x, targetPos.y - transform.position.y).normalized;
-            Vector2 lerpedDirection = Vector2.Lerp(body.velocity.normalized, directionToPlayer, Time.deltaTime * 5);
+            Vector2 lerpedDirection = Vector2.Lerp(body.velocity.normalized, directionToPlayer, Time.deltaTime * 2);
             body.velocity = lerpedDirection * speed;
             transform.up = lerpedDirection;
         }
