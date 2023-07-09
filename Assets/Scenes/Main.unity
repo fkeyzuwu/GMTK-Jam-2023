@@ -480,15 +480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6526321090022633233, guid: 0fdda10c0412c05488611d675c83baa9, type: 3}
       propertyPath: amount
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526321090022633233, guid: 0fdda10c0412c05488611d675c83baa9, type: 3}
-      propertyPath: maxWaitTime
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526321090022633233, guid: 0fdda10c0412c05488611d675c83baa9, type: 3}
-      propertyPath: minWaitTime
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

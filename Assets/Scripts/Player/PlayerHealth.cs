@@ -37,7 +37,9 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         healthText.SetTextHealth(currentHealth, maxHealth);
         StopAllCoroutines();
+        AudioManager.Instance.PlaySound("Grunt");
         StartCoroutine(ChangePlayerColor(damageColor));
+
         if (currentHealth <= 0)
         {
             print("You win!");
@@ -50,6 +52,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         healthText.SetTextHealth(currentHealth, maxHealth);
         StopAllCoroutines();
+        AudioManager.Instance.PlaySound("Heal");
         StartCoroutine(ChangePlayerColor(healColor));
     }
 
