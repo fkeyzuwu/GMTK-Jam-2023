@@ -93,6 +93,11 @@ public class PlayerController : MonoBehaviour
 
     public void UpgradePicked(UpgradeData upgradePicked)
     {
+        if (upgradePicked.Name == "Poison") 
+            AudioManager.Instance.PlaySound("Poison Upgrade");
+        else if (upgradePicked.Name == "Magnet")
+            AudioManager.Instance.PlaySound("Magnet Upgrade");
+
         upgradeSystem.AddUpgrade(upgradePicked);
         upgradePicker.gameObject.SetActive(false);
         Time.timeScale = 1f;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class LandMineTrap : TrapDamage
 {
     Animator animator;
+
     private void Start()
     {
         animator = GetComponent<Animator>();    
@@ -17,6 +18,7 @@ public class LandMineTrap : TrapDamage
         if (collision.CompareTag("Player"))
         {
             animator.SetTrigger("PlayerON");
+            AudioManager.Instance.PlaySound("Explosion");
         }
     }
 }

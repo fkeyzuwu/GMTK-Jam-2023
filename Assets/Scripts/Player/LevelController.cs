@@ -62,12 +62,13 @@ public class LevelController : MonoBehaviour
         {
             currentExp += gainedExp;
         }
-
+        AudioManager.Instance.PlaySound("EXP");
         UpdateUI();
     }
 
     private void LevelUp()
     {
+        AudioManager.Instance.PlaySound("Level Up");
         level++;
         requiredExp = CalculateRequiredExp();
         PlayerController.Instance.ActivateUpgradePicker();
