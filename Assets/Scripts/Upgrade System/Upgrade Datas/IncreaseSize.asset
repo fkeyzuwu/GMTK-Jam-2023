@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: IncreaseSize
   m_EditorClassIdentifier: 
   Name: Go big or go home
-  Description: Make you BIGGER OwO
+  Description: Make you BIGGER
+  Duration: 0
+  MaxStack: 0
   Icon: {fileID: 21300000, guid: 33beee12818d870419e3c20a4a8a53c1, type: 3}
   IsTimed: 0
-  Duration: 0
   IsStackable: 1
   IsDurationExtending: 0
   IsMaxStackLimited: 0
-  MaxStack: 0
-  multiplier: 1.1
+  multiplier: 1.3

@@ -163,6 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff06decf3d96154b8789eedfda5d007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iFrameDuration: 0.5
+  numberOfFlahses: 1
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  healColor: {r: 0, g: 1, b: 0, a: 1}
+  spriteRenderer: {fileID: 7440109817397585363}
   maxHealth: 1000
   healthBar: {fileID: 0}
   healthText: {fileID: 0}
