@@ -6,10 +6,10 @@ public class MagnetFieldDrawer : MonoBehaviour
 {
     [SerializeField] SpriteRenderer magnetField;
     [SerializeField] new CircleCollider2D collider;
-    public void UpgradeMagnetField()
+    public void UpgradeMagnetField(float increaseRadius)
     {
         collider.enabled = true;
-        collider.radius += 1;
+        collider.radius += increaseRadius;
         magnetField.enabled = true;
         magnetField.transform.localScale = new Vector3(collider.radius * 2, collider.radius * 2, collider.radius * 2);
     }

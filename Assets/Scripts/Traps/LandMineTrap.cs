@@ -6,7 +6,7 @@ public class LandMineTrap : TrapDamage
 {
     Animator animator;
 
-    private void Start()
+    private  void Start()
     {
         animator = GetComponent<Animator>();    
         base.Start();
