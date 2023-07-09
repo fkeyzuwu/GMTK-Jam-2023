@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Poison
   Description: Deals 1% of max health in damage.
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 44633dc796527464d9926d7f95b1ea74, type: 3}
   IsTimed: 0
   Duration: 0
   IsStackable: 1
