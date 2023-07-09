@@ -69,6 +69,7 @@ public class LevelController : MonoBehaviour
     private void LevelUp()
     {
         AudioManager.Instance.PlaySound("Level Up");
+        PlayerController.Instance.health.Heal(PlayerController.Instance.health.maxHealth * 0.3f);
         level++;
         requiredExp = CalculateRequiredExp();
         PlayerController.Instance.ActivateUpgradePicker();
