@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Toxic Trails
   Description: Summon poison storms around the player.
-  Icon: {fileID: 0}
-  IsTimed: 0
   Duration: 0
+  MaxStack: 0
+  Icon: {fileID: -939877522, guid: 791b94ef6f6b60e4388352ab1f8e9041, type: 3}
+  IsTimed: 0
   IsStackable: 1
   IsDurationExtending: 0
   IsMaxStackLimited: 0
-  MaxStack: 0
   tickIntervalSeconds: 25
   amount: 3
   prefab: {fileID: 8387449369264972577, guid: 73275dc127963d443bff836b42641562, type: 3}
