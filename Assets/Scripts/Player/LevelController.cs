@@ -38,10 +38,6 @@ public class LevelController : MonoBehaviour
     {
         currentExp = 0;
         requiredExp = CalculateRequiredExp();
-        experienceBar.SetMaxExperience(requiredExp);
-        experienceBar.SetExperience(currentExp);
-        experienceText.SetTextExperience(currentExp, requiredExp);
-        lvlText.SetTextLvL(level);
     }
 
     private void Update()
@@ -50,16 +46,16 @@ public class LevelController : MonoBehaviour
         {
             LevelUp();
         }
+        experienceBar.SetMaxExperience(requiredExp);
+        experienceBar.SetExperience(currentExp);
+        experienceText.SetTextExperience(currentExp, requiredExp);
+        lvlText.SetTextLvL(level);
     }
 
     public void GainExperience(float exp)
     {
         float multiplier = (1 + (int)(level / levelScaleExpGain) * gainExpMultiplier);
         currentExp += (int)(exp * multiplier);
-        experienceBar.SetMaxExperience(requiredExp);
-        experienceBar.SetExperience(currentExp);
-        experienceText.SetTextExperience(currentExp, requiredExp);
-        lvlText.SetTextLvL(level);
     }
 
     private void LevelUp()
@@ -67,9 +63,6 @@ public class LevelController : MonoBehaviour
         level++;
         currentExp = Mathf.RoundToInt(currentExp - requiredExp);
         requiredExp = CalculateRequiredExp();
-        experienceBar.SetExperience(currentExp);
-        experienceText.SetTextExperience(currentExp, requiredExp);
-
         PlayerController.Instance.ActivateUpgradePicker();
     }
 
