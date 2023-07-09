@@ -14,7 +14,9 @@ public class LandMineTrap : TrapDamage
     private void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);
-        animator.SetTrigger("PlayerON");
-        
+        if (collision.CompareTag("Player"))
+        {
+            animator.SetTrigger("PlayerON");
+        }
     }
 }
