@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7023361bd502b3a4398d3fde05f3dd53, type: 3}
   m_Name: PoisonSummon
   m_EditorClassIdentifier: 
-  Name: Poison Summon
-  Description: Summon Poisons around the player
+  Name: Toxic Trails
+  Description: Summon poison storms around the player.
   Icon: {fileID: 0}
-  Duration: 0
   IsTimed: 0
+  Duration: 0
   IsStackable: 1
   IsDurationExtending: 0
+  IsMaxStackLimited: 0
+  MaxStack: 0
   tickIntervalSeconds: 25
   amount: 3
   prefab: {fileID: 8387449369264972577, guid: 73275dc127963d443bff836b42641562, type: 3}

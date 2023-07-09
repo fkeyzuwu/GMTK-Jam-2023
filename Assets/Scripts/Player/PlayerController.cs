@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
     public void ActivateUpgradePicker()
     {
         upgradePicker.gameObject.SetActive(true);
+        upgradePicker.GenerateUpgrades();
         Time.timeScale = 0f;
     }
 

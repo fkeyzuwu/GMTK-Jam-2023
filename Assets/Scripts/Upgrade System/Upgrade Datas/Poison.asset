@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Poison
   m_EditorClassIdentifier: 
   Name: Poison
-  Description: Deals 1% of max health in damage
+  Description: Deals 1% of max health in damage.
   Icon: {fileID: 0}
-  Duration: 0
   IsTimed: 0
+  Duration: 0
   IsStackable: 1
   IsDurationExtending: 0
+  IsMaxStackLimited: 0
+  MaxStack: 0
   damagePercentPerTick: 1
   tickIntervalSeconds: 1
