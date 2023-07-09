@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03fcb34cbf8b5f34da14de1d3093e76c
+guid: 791b94ef6f6b60e4388352ab1f8e9041
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spikes_0
+      name: poisiongood_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 29
-        height: 27
+        width: 32
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ac6ad1bd65757f49b4f023be115ef22
-      internalID: 825276312
+      spriteID: 1e5003602da887941bf64c6ad3297f5e
+      internalID: 503355431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_1
+      name: poisiongood_1
       rect:
         serializedVersion: 2
         x: 33
         y: 0
-        width: 29
-        height: 25
+        width: 32
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cace31314f2b24447bfe6eda7e25fb92
-      internalID: 1909862132
+      spriteID: 97fbae296231f7549829db328b0dcc26
+      internalID: -939877522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_2
+      name: poisiongood_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 67
         y: 0
-        width: 29
-        height: 25
+        width: 31
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd529def172f33543a256059ba73b14d
-      internalID: 1774735140
+      spriteID: 2f87cac7a45f9ab48a5a37022292e7a3
+      internalID: -169539926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_3
+      name: poisiongood_3
       rect:
         serializedVersion: 2
-        x: 99
+        x: 100
         y: 0
-        width: 28
-        height: 27
+        width: 31
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,29 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6d265299b7f8eb4785d13fbab4945d5
-      internalID: 894016244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spikes_4
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 0
-        width: 29
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 837233fafd63a1b4f94c9858c0402a45
-      internalID: 1376809592
+      spriteID: 8f794da943bcf68428cb20b118261e6e
+      internalID: -544088921
       vertices: []
       indices: 
       edges: []
@@ -238,11 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spikes_0: 825276312
-      spikes_1: 1909862132
-      spikes_2: 1774735140
-      spikes_3: 894016244
-      spikes_4: 1376809592
+      poisiongood_0: 503355431
+      poisiongood_1: -939877522
+      poisiongood_2: -169539926
+      poisiongood_3: -544088921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

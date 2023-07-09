@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7261d200a1f71984db681454105f7574
+guid: ccbeefcd7d150364792a3721323d389d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poision-removebg-preview_0
+      name: spike2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f52dfc0000300f4e8671add2beab956
-      internalID: 1121555552
+      spriteID: a060b759950f64e4a9a027fe6f056b6a
+      internalID: -1420561097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poision-removebg-preview_1
+      name: spike2_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af5de4b7646f97b49997bb3b180d3f4e
-      internalID: 1742348760
+      spriteID: 593b2b8bef7af12448c34e55aedce873
+      internalID: -468334959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poision-removebg-preview_2
+      name: spike2_2
       rect:
         serializedVersion: 2
-        x: 67
+        x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,29 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4fff1c6da4a60f46bc87ab7b1093b2b
-      internalID: -1470281718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poision-removebg-preview_3
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42da2959a13a808459fdcd07e3ec0956
-      internalID: 2110303033
+      spriteID: 8927b07dd63cbf64baea161ded4357a5
+      internalID: 1135674732
       vertices: []
       indices: 
       edges: []
@@ -217,10 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      poision-removebg-preview_0: 1121555552
-      poision-removebg-preview_1: 1742348760
-      poision-removebg-preview_2: -1470281718
-      poision-removebg-preview_3: 2110303033
+      spike2_0: -1420561097
+      spike2_1: -468334959
+      spike2_2: 1135674732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
