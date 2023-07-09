@@ -165,6 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1ecae7686d55045946a8fecb52679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 150
+  damage: 100
   durationKeepAlive: 30
   cooldownAttack: 5

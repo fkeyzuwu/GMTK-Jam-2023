@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CritChance
   m_EditorClassIdentifier: 
   Name: Critical Chance
-  Description: +0.1% chance to receive double damage from all sources
+  Description: +1% chance to receive double damage from all sources
   Duration: 0
   MaxStack: 1000
   Icon: {fileID: 21300000, guid: b0db2d409588e0748aedaa1c0adec0cf, type: 3}
@@ -21,4 +21,4 @@ MonoBehaviour:
   IsStackable: 1
   IsDurationExtending: 0
   IsMaxStackLimited: 1
-  critChance: 0.1
+  critChance: 1
