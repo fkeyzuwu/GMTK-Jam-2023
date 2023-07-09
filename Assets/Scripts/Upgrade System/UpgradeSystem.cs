@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,11 +12,6 @@ public class UpgradeSystem : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //GenerateRandomUpgrade();
-        }
-
         foreach (Upgrade upgrade in activeUpgrades.Values)
         {
             if (upgrade.upgradeData.IsTimed)
@@ -27,17 +21,57 @@ public class UpgradeSystem : MonoBehaviour
                 activeUpgrades.Remove(upgrade.upgradeData);
         }
     }
+
+    public List<int> GenerateRandomUniqueNumbers(int amount, int maxNum)
+    {
+        if(maxNum <= 0)
+        {
+            Debug.LogError("[UpgradeSystem] No possible upgrades available");
+            return null;
+        }
+
+        List<int> randomNumbers = new List<int>();
+
+        if (amount >= maxNum)
+        {
+            for(int i=0 ; i < amount; i++)
+            {
+                if (i > maxNum - 1)
+                    randomNumbers.Add(maxNum - 1);
+                else
+                    randomNumbers.Add(i);
+            }
+        }
+        else
+        {
+            while (randomNumbers.Count < amount)
+            {
+                int randomNum = Random.Range(0, maxNum);
+
+                if (!randomNumbers.Contains(randomNum))
+                    randomNumbers.Add(randomNum);
+            }
+        }
+
+        return randomNumbers;
+    }
     
     public List<UpgradeData> GenerateRandomUpgrades(int amount)
     {
         if (possibleUpgrades.Count > 0)
         {
             List<UpgradeData> randomUpgrades = new List<UpgradeData>();
+            List<int> randomNumbers = GenerateRandomUniqueNumbers(amount, possibleUpgrades.Count);
 
-            for (int i = 0; i < amount; i++)
+            if (randomNumbers == null)
             {
-                int randomUpgradeIndex = UnityEngine.Random.Range(0, possibleUpgrades.Count);
-                randomUpgrades.Add(possibleUpgrades[randomUpgradeIndex]);
+                Debug.LogError("[UpgradeSystem] Failed to receive random upgrades");
+                return null;
+            }
+
+            foreach (int num in randomNumbers)
+            {
+                randomUpgrades.Add(possibleUpgrades[num]);
             }
             
             return randomUpgrades;
