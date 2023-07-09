@@ -5,17 +5,10 @@ using UnityEngine;
 
 public class UpgradePicker : MonoBehaviour
 {
-    private UpgradeSystem upgradeSystem;
-
     public UpgradePick[] upgradePicks;
-
-    private void Start()
-    {
-        upgradeSystem = PlayerController.Instance.upgradeSystem;
-        GenerateUpgrades();
-    }
     public void GenerateUpgrades()
     {
+        UpgradeSystem upgradeSystem = PlayerController.Instance.upgradeSystem;
         List<UpgradeData> upgrades = upgradeSystem.GenerateRandomUpgrades(3);
         for (int i = 0; i < upgrades.Count; i++)
         {
