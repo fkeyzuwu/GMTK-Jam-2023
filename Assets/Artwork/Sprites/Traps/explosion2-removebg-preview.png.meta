@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03fcb34cbf8b5f34da14de1d3093e76c
+guid: 4031733a51e207546b3c8596f5eb5152
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spikes_0
+      name: explosion2-removebg-preview_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 29
-        height: 27
+        x: 427
+        y: 155
+        width: 164
+        height: 168
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ac6ad1bd65757f49b4f023be115ef22
-      internalID: 825276312
+      spriteID: 8a3a7cedf37639d42a9c9315ed73864e
+      internalID: -1491198197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_1
+      name: explosion2-removebg-preview_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 29
-        height: 27
+        x: 116
+        y: 188
+        width: 104
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cace31314f2b24447bfe6eda7e25fb92
-      internalID: 1909862132
+      spriteID: 2b81525df4051e146b8736acf140ef1a
+      internalID: -134448428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_2
+      name: explosion2-removebg-preview_4
       rect:
         serializedVersion: 2
-        x: 66
-        y: 0
-        width: 29
-        height: 27
+        x: 240
+        y: 159
+        width: 166
+        height: 166
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd529def172f33543a256059ba73b14d
-      internalID: 1774735140
+      spriteID: fe9855979d2ed2a42b53d1c643a21e52
+      internalID: 1167474612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_3
+      name: explosion2-removebg-preview_7
       rect:
         serializedVersion: 2
-        x: 99
-        y: 0
-        width: 28
-        height: 27
+        x: 21
+        y: 197
+        width: 83
+        height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6d265299b7f8eb4785d13fbab4945d5
-      internalID: 894016244
+      spriteID: 32a3282095578604fbc6e9eeafa553e6
+      internalID: 666779039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spikes_4
+      name: explosion2-removebg-preview_16
       rect:
         serializedVersion: 2
-        x: 131
-        y: 0
-        width: 29
-        height: 27
+        x: 30
+        y: 19
+        width: 140
+        height: 139
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 837233fafd63a1b4f94c9858c0402a45
-      internalID: 1376809592
+      spriteID: 2c54f26582d184a48817996dd962775b
+      internalID: 913042503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion2-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 28
+        width: 124
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe3dc80233c9ce43b503303ffa385c8
+      internalID: 1900926317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion2-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 31
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc649ff656ab804f9fc49130825c7a8
+      internalID: 261478417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion2-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 45
+        width: 103
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f169da5714651c844a5e24705b0f4efa
+      internalID: -1729595773
       vertices: []
       indices: 
       edges: []
@@ -238,11 +301,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spikes_0: 825276312
-      spikes_1: 1909862132
-      spikes_2: 1774735140
-      spikes_3: 894016244
-      spikes_4: 1376809592
+      explosion2-removebg-preview_0: 1426608154
+      explosion2-removebg-preview_1: -1491198197
+      explosion2-removebg-preview_10: 77336229
+      explosion2-removebg-preview_11: -640445907
+      explosion2-removebg-preview_12: -881463218
+      explosion2-removebg-preview_13: -703428050
+      explosion2-removebg-preview_14: 1029412753
+      explosion2-removebg-preview_15: -3501637
+      explosion2-removebg-preview_16: 913042503
+      explosion2-removebg-preview_17: 560922851
+      explosion2-removebg-preview_18: 2063352407
+      explosion2-removebg-preview_19: 1900926317
+      explosion2-removebg-preview_2: -134448428
+      explosion2-removebg-preview_20: 18286737
+      explosion2-removebg-preview_21: 261478417
+      explosion2-removebg-preview_22: 1222328616
+      explosion2-removebg-preview_23: -1729595773
+      explosion2-removebg-preview_24: 1693162499
+      explosion2-removebg-preview_25: -590152356
+      explosion2-removebg-preview_26: 602001836
+      explosion2-removebg-preview_27: 919647578
+      explosion2-removebg-preview_28: -1607446033
+      explosion2-removebg-preview_29: -1521809108
+      explosion2-removebg-preview_3: 1192291411
+      explosion2-removebg-preview_30: 1569313863
+      explosion2-removebg-preview_4: 1167474612
+      explosion2-removebg-preview_5: 557609075
+      explosion2-removebg-preview_6: 1702636691
+      explosion2-removebg-preview_7: 666779039
+      explosion2-removebg-preview_8: -1378174691
+      explosion2-removebg-preview_9: -1947750380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

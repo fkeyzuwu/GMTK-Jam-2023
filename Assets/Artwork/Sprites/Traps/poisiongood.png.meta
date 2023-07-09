@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7261d200a1f71984db681454105f7574
+guid: 791b94ef6f6b60e4388352ab1f8e9041
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poision-removebg-preview_0
+      name: poisiongood_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 32
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f52dfc0000300f4e8671add2beab956
-      internalID: 1121555552
+      spriteID: 1e5003602da887941bf64c6ad3297f5e
+      internalID: 503355431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poision-removebg-preview_1
+      name: poisiongood_1
       rect:
         serializedVersion: 2
         x: 33
         y: 0
         width: 32
-        height: 32
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af5de4b7646f97b49997bb3b180d3f4e
-      internalID: 1742348760
+      spriteID: 97fbae296231f7549829db328b0dcc26
+      internalID: -939877522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poision-removebg-preview_2
+      name: poisiongood_2
       rect:
         serializedVersion: 2
         x: 67
         y: 0
-        width: 32
-        height: 32
+        width: 31
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4fff1c6da4a60f46bc87ab7b1093b2b
-      internalID: -1470281718
+      spriteID: 2f87cac7a45f9ab48a5a37022292e7a3
+      internalID: -169539926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poision-removebg-preview_3
+      name: poisiongood_3
       rect:
         serializedVersion: 2
-        x: 99
+        x: 100
         y: 0
-        width: 32
-        height: 32
+        width: 31
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42da2959a13a808459fdcd07e3ec0956
-      internalID: 2110303033
+      spriteID: 8f794da943bcf68428cb20b118261e6e
+      internalID: -544088921
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      poision-removebg-preview_0: 1121555552
-      poision-removebg-preview_1: 1742348760
-      poision-removebg-preview_2: -1470281718
-      poision-removebg-preview_3: 2110303033
+      poisiongood_0: 503355431
+      poisiongood_1: -939877522
+      poisiongood_2: -169539926
+      poisiongood_3: -544088921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
